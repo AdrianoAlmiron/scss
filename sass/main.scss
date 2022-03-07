@@ -3,6 +3,9 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+$Colores: (
+	Fondo: #cccccc
+);
 
 html {
     scroll-behavior: smooth;
@@ -18,9 +21,8 @@ html {
         }
 body {
     font-family: 'Noto Sans JP', sans-serif;	
-	background-color: #D9AFD9;
-background-image: linear-gradient(0deg, #D9AFD9 24%, #97D9E1 56%, #c8f3f9 100%);
-
+	background-color: map-get($Colores, $Fondo);
+	background-image: map-get($Colores, $Fondo);
 
 }
 
@@ -70,7 +72,7 @@ background-image: linear-gradient(0deg, #D9AFD9 24%, #97D9E1 56%, #c8f3f9 100%);
 
 
 
-main {
+@mixin main {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: row;
@@ -96,6 +98,7 @@ main .contenido .fecha {
 
 
 aside {
+	@include main;
 	min-width: 30%;
 	margin: 40px 20px 20px 0;
 	height: 100%;
@@ -130,10 +133,12 @@ aside .indice a {
 }
 
 
-footer .navbar{
-    position: sticky;
-    bottom: 0;
-	background-color: #d6a0d6;
+footer--navbar{
+	@extend.navbar
+    position: sticky
+    bottom: 0
+	background-color: #d6a0d6
+	
 }
 
 

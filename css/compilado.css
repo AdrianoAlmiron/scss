@@ -14,10 +14,42 @@ html {
 body {
   font-family: 'Noto Sans JP', sans-serif;
   background-color: #D9AFD9;
-  background-image: linear-gradient(0deg, #D9AFD9 24%, #97D9E1 56%, #c8f3f9 100%); }
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+}
+
+  h1 {
+		display: inline;
+		position: relative;
+		font: 100px Helvetica, Sans-Serif;
+		letter-spacing: -5px;
+		color: whitesmoke; 
+	}
+	
+	h1:after {
+		content: "Adriano Almiron";
+		position: absolute; left: 5px; top: 5px;
+		color: black;   
+	}
+
+  h2 {
+		display: inline;
+		position: relative;
+		font: 50px Helvetica, Sans-Serif;
+		letter-spacing: -5px;
+		color: rgba(2, 2, 97, 0.911); 
+	}
+	
+	h2:after {
+		position: absolute; left: 5px; top: 5px;
+		color: rgba(255,0,0,0.5);   
+	}
+  img{
+    width: auto;
+    height: auto;
+  }
 
 .navbar {
-  background: #97D9E1;
+  background: #fccedc;
   position: sticky;
   top: 0; }
 
@@ -31,7 +63,7 @@ body {
   transition: .3s ease-out all; }
 
 .navbar a:hover {
-  background: #dcb2ee;
+  background: #97D9E1;
   color: #fff;
   text-decoration: none; }
 
@@ -101,7 +133,7 @@ aside .indice a {
 footer .navbar {
   position: sticky;
   bottom: 0;
-  background-color: #d6a0d6; }
+  background-color: #5ab9b5; }
 
 @media screen and (max-width: 900px) {
   .navbar .contenedor {
