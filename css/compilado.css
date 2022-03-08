@@ -17,13 +17,12 @@ body {
   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 }
 
-  h1 {
-		display: inline;
-		position: relative;
-		font: 100px Helvetica, Sans-Serif;
-		letter-spacing: -5px;
-		color: whitesmoke; 
-	}
+h1 {
+  display: flex;
+  position: relative;
+  font: 50px Helvetica, Sans-Serif;
+  color: whitesmoke;
+}
 	
 	h1:after {
 		content: "Adriano Almiron";
@@ -43,9 +42,14 @@ body {
 		position: absolute; left: 5px; top: 5px;
 		color: rgba(255,0,0,0.5);   
 	}
-  img{
+
+  .hijofooter{
     width: auto;
     height: auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
   }
 
 .navbar {
@@ -73,13 +77,17 @@ body {
   margin: auto;
   display: flex;
   justify-content: space-between; }
-
+  img {
+    display: block;
+    width: 50%;
+    padding-left: 0;
+}
 .hijo {
   display: flex;
-  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-  background: transparent; }
+  background: transparent; 
+}
 
 main {
   min-height: 100vh;
