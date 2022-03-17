@@ -1,23 +1,65 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+ }
 
 html {
-  scroll-behavior: smooth; }
-  html a {
+  scroll-behavior: smooth;
+ }
+
+a {
     text-decoration: none;
-    outline: none; }
+    outline: none;
+  }
+
   html a:hover {
-    text-decoration: underline; }
+    text-decoration: underline; 
+  }
 
 body {
   font-family: 'Noto Sans JP', sans-serif;
-  background-color: #D9AFD9;
-  background-image: linear-gradient(0deg, #D9AFD9 24%, #97D9E1 56%, #c8f3f9 100%); }
+  background-color: #fdfdfd;
+  background-image: linear-gradient(to top, #f8b967 0%, #fcf6f8 100%);
+}
+
+h1 {
+  display: flex;
+  position: relative;
+  font: 50px Helvetica, Sans-Serif;
+  color: rgb(253, 203, 109);
+}
+	
+	h1:after {
+		content: "Adriano Almiron";
+		position: absolute; left: 5px; top: 5px;
+		color: black;   
+	}
+
+  h2 {
+		display: inline;
+		position: relative;
+		font: 40px Helvetica, Sans-Serif;
+		letter-spacing: -5px;
+		color: rgba(2, 2, 97, 0.911); 
+	}
+	
+	h2:after {
+		position: absolute; left: 5px; top: 5px;
+		color: rgba(255,0,0,0.5);   
+	}
+
+  .hijofooter{
+    width: auto;
+    height: auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
 
 .navbar {
-  background: #97D9E1;
+  background: #f5b265;
   position: sticky;
   top: 0; }
 
@@ -28,26 +70,35 @@ body {
   width: 100%;
   text-align: center;
   color: white;
-  transition: .3s ease-out all; }
+  transition: .3s ease-out all;
+ }
 
 .navbar a:hover {
-  background: #dcb2ee;
+  background: #fa7a02;
   color: #fff;
-  text-decoration: none; }
+  text-decoration: none; 
+}
 
 .contenedor {
   max-width: 1000px;
   width: 90%;
   margin: auto;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+ }
 
-.hijo {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
-  background: transparent; }
+  .contenedor-imagen {
+    height: 100vh;
+    margin: 3px;
+  }
+  
+  .contenedor-imagen img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    object-fit: cover;
+    object-position: 0 bottom;
+  }
 
 main {
   min-height: 100vh;
@@ -68,53 +119,26 @@ main .contenido .fecha {
   font-size: 14px;
   color: #d12349; }
 
-aside {
-  min-width: 30%;
-  margin: 40px 20px 20px 0;
-  height: 100%;
-  padding: 20px;
-  border-radius: 3px;
-  position: sticky;
-  top: 20px; }
-
-aside .titulo {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: normal;
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #0c0c0c; }
-
-aside .indice a {
-  display: block;
-  margin-bottom: 10px;
-  color: #020202; }
-
-.music {
-  position: sticky;
-  padding: 10px; }
-
-.music h4 {
-  position: sticky;
-  color: black;
-  font-size: medium; }
 
 footer .navbar {
   position: sticky;
   bottom: 0;
-  background-color: #d6a0d6; }
+  background-color: #030303;
+ }
 
 @media screen and (max-width: 900px) {
   .navbar .contenedor {
     flex-wrap: wrap;
     margin: 0;
     width: 100%; }
+
   .navbar a {
     width: auto;
     flex: 1; }
+
   .contenedor-imagen {
     height: 50vh; }
+
   main .contenedor {
     flex-direction: row; }
-  aside {
-    position: static;
-    margin: 40px 0 0; } }
+  
